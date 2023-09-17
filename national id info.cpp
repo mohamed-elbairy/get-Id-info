@@ -45,7 +45,7 @@ private:
     // Function to extract gender from the ID
     string extractGender() const {
         int genderDigit = id[12] - '0'; // Convert the character to an integer
-        return (genderDigit % 2 == 0) ? "Male" : "Female";
+        return (genderDigit % 2 == 1) ? "Male" : "Female";
     }
 
 public:
@@ -81,6 +81,7 @@ public:
 
 // Initialize the governorate code map
 const vector<pair<string, string>> IDParser::governorateMap = {
+
           {"Cairo","01"}
          ,{"Alex","02"}
          ,{"Portsaid","03"}
@@ -108,7 +109,6 @@ const vector<pair<string, string>> IDParser::governorateMap = {
          ,{"Nourth Of Sina","33"}
          ,{"South Of Sina","35"}
          ,{"Born abroad","88"} };
-
 
 int main() {
     string inputID;
